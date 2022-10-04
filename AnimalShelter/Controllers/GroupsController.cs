@@ -5,19 +5,19 @@ using System.Linq;
 
 namespace AnimalShelter.Controllers
 {
-  public class AnimalsController : Controller
+  public class GroupsController : Controller
   {
     private readonly AnimalShelterContext _db;
 
-    public AnimalsController(AnimalShelterContext db)
+    public GroupsController(AnimalShelterContext db)
     {
       _db = db;
     }
 
     public ActionResult Index()
     {
-      List<Animal> model = _db.Animals.ToList();
-      return View(model);
+    //   List<Animal> model = _db.Animals.ToList();
+      return View();
     }
 
     public ActionResult Create()
